@@ -29,7 +29,7 @@ struct MoreView: View {
         .background(Aviary.cream.ignoresSafeArea())
         .navigationBarHidden(true)
         .sheet(isPresented: $showPrivacy) {
-            FeatherWebPanel(urlString: "https://example.com")
+            PrivacyPolicyView()
         }
         .alert(isPresented: $confirmReset) {
             Alert(
