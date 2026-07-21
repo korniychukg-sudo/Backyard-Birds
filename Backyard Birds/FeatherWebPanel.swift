@@ -79,7 +79,7 @@ struct FeatherPolicyPanel: UIViewRepresentable {
 struct PrivacyPolicyView: View {
     @Environment(\.presentationMode) private var presentationMode
     @State private var loadState: FeatherLoadState = .loading
-    private let policyLink = "https://example.com"
+    private let policyLink = "https://sites.google.com/view/backyard-birdss/"
 
     var body: some View {
         VStack(spacing: 0) {

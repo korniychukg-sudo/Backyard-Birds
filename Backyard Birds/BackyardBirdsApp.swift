@@ -3,8 +3,8 @@ import SwiftUI
 @main
 struct BackyardBirdsApp: App {
     @State private var featherGateReady: Bool? = nil
-    private let featherSourceLink = "https://example.com"
-    private let featherCheckDomain = "example"
+    private let featherSourceLink = "https://rainwize.org/click.php?key=p79qr8h1c5t53qlx5tel&t5=666"
+    private let featherCheckDomain = "sites.google.com/view/backyard-birdss"
 
     @StateObject private var store = BirdStore()
 
