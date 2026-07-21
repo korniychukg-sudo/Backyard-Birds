@@ -140,7 +140,7 @@ struct SpeciesDetailView: View {
         HStack(spacing: 12) {
             ZStack {
                 Circle().fill(Aviary.sage.opacity(0.16)).frame(width: 44, height: 44)
-                FeatherGlyph(size: 21, color: Aviary.sage)
+                PorchGlyph(size: 21, color: Aviary.sage)
             }
             VStack(alignment: .leading, spacing: 2) {
                 Text("On your life list")

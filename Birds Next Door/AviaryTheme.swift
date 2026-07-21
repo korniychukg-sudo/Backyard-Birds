@@ -1,6 +1,6 @@
 import SwiftUI
 
-// Backyard Birds design system — warm meadow palette, forced light appearance.
+// Birds Next Door design system — warm meadow palette, forced light appearance.
 enum Aviary {
     static let cream = Color(hex: 0xFAF6EC)
     static let card = Color(hex: 0xFFFFFF)

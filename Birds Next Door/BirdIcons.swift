@@ -133,17 +133,17 @@ struct SearchShape: Shape {
 
 // MARK: - Filled glyphs
 
-struct FeatherGlyph: View {
+struct PorchGlyph: View {
     var size: CGFloat = 20
     var color: Color = Aviary.forest
     var body: some View {
-        FeatherShape()
+        PorchShape()
             .fill(color)
             .frame(width: size, height: size)
     }
 }
 
-struct FeatherShape: Shape {
+struct PorchShape: Shape {
     func path(in rect: CGRect) -> Path {
         var p = Path()
         let w = rect.width, h = rect.height
@@ -529,7 +529,7 @@ struct BadgeIconView: View {
 
     var body: some View {
         switch kind {
-        case .feather: FeatherGlyph(size: size, color: color)
+        case .feather: PorchGlyph(size: size, color: color)
         case .egg: EggGlyph(size: size, color: color)
         case .nest: NestGlyph(size: size, color: color)
         case .star: StarGlyph(size: size, color: color)

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB0000000000000000000101 /* BackyardBirdsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000001 /* BackyardBirdsApp.swift */; };
-		BB0000000000000000000102 /* FeatherWebPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000002 /* FeatherWebPanel.swift */; };
-		BB0000000000000000000103 /* FeatherLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000003 /* FeatherLaunchScreen.swift */; };
+		BB0000000000000000000101 /* BirdsNextDoorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000001 /* BirdsNextDoorApp.swift */; };
+		BB0000000000000000000102 /* PorchWebPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000002 /* PorchWebPanel.swift */; };
+		BB0000000000000000000103 /* PorchLaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000003 /* PorchLaunchScreen.swift */; };
 		BB0000000000000000000104 /* AviaryTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000004 /* AviaryTheme.swift */; };
 		BB0000000000000000000105 /* BirdModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000005 /* BirdModels.swift */; };
 		BB0000000000000000000106 /* SpeciesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0000000000000000000006 /* SpeciesData.swift */; };
@@ -33,9 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB0000000000000000000001 /* BackyardBirdsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardBirdsApp.swift; sourceTree = "<group>"; };
-		BB0000000000000000000002 /* FeatherWebPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatherWebPanel.swift; sourceTree = "<group>"; };
-		BB0000000000000000000003 /* FeatherLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatherLaunchScreen.swift; sourceTree = "<group>"; };
+		BB0000000000000000000001 /* BirdsNextDoorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsNextDoorApp.swift; sourceTree = "<group>"; };
+		BB0000000000000000000002 /* PorchWebPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorchWebPanel.swift; sourceTree = "<group>"; };
+		BB0000000000000000000003 /* PorchLaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorchLaunchScreen.swift; sourceTree = "<group>"; };
 		BB0000000000000000000004 /* AviaryTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviaryTheme.swift; sourceTree = "<group>"; };
 		BB0000000000000000000005 /* BirdModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdModels.swift; sourceTree = "<group>"; };
 		BB0000000000000000000006 /* SpeciesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesData.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		BB0000000000000000000030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0000000000000000000031 /* Art */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Art; sourceTree = "<group>"; };
 		BB0000000000000000000032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB0000000000000000000033 /* Backyard Birds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backyard Birds.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0000000000000000000033 /* Birds Next Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birds Next Door.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,17 +74,17 @@
 		BB0000000000000000000301 = {
 			isa = PBXGroup;
 			children = (
-				BB0000000000000000000302 /* Backyard Birds */,
+				BB0000000000000000000302 /* Birds Next Door */,
 				BB0000000000000000000303 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB0000000000000000000302 /* Backyard Birds */ = {
+		BB0000000000000000000302 /* Birds Next Door */ = {
 			isa = PBXGroup;
 			children = (
-				BB0000000000000000000001 /* BackyardBirdsApp.swift */,
-				BB0000000000000000000002 /* FeatherWebPanel.swift */,
-				BB0000000000000000000003 /* FeatherLaunchScreen.swift */,
+				BB0000000000000000000001 /* BirdsNextDoorApp.swift */,
+				BB0000000000000000000002 /* PorchWebPanel.swift */,
+				BB0000000000000000000003 /* PorchLaunchScreen.swift */,
 				BB0000000000000000000004 /* AviaryTheme.swift */,
 				BB0000000000000000000005 /* BirdModels.swift */,
 				BB0000000000000000000006 /* SpeciesData.swift */,
@@ -107,13 +107,13 @@
 				BB0000000000000000000031 /* Art */,
 				BB0000000000000000000032 /* Info.plist */,
 			);
-			path = "Backyard Birds";
+			path = "Birds Next Door";
 			sourceTree = "<group>";
 		};
 		BB0000000000000000000303 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB0000000000000000000033 /* Backyard Birds.app */,
+				BB0000000000000000000033 /* Birds Next Door.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB0000000000000000000401 /* Backyard Birds */ = {
+		BB0000000000000000000401 /* Birds Next Door */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB0000000000000000000501 /* Build configuration list for PBXNativeTarget "Backyard Birds" */;
+			buildConfigurationList = BB0000000000000000000501 /* Build configuration list for PBXNativeTarget "Birds Next Door" */;
 			buildPhases = (
 				BB0000000000000000000601 /* Sources */,
 				BB0000000000000000000201 /* Frameworks */,
@@ -133,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = "Backyard Birds";
-			productName = "Backyard Birds";
-			productReference = BB0000000000000000000033 /* Backyard Birds.app */;
+			name = "Birds Next Door";
+			productName = "Birds Next Door";
+			productReference = BB0000000000000000000033 /* Birds Next Door.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB0000000000000000000502 /* Build configuration list for PBXProject "Backyard Birds" */;
+			buildConfigurationList = BB0000000000000000000502 /* Build configuration list for PBXProject "Birds Next Door" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,7 +166,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB0000000000000000000401 /* Backyard Birds */,
+				BB0000000000000000000401 /* Birds Next Door */,
 			);
 		};
 /* End PBXProject section */
@@ -188,9 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0000000000000000000101 /* BackyardBirdsApp.swift in Sources */,
-				BB0000000000000000000102 /* FeatherWebPanel.swift in Sources */,
-				BB0000000000000000000103 /* FeatherLaunchScreen.swift in Sources */,
+				BB0000000000000000000101 /* BirdsNextDoorApp.swift in Sources */,
+				BB0000000000000000000102 /* PorchWebPanel.swift in Sources */,
+				BB0000000000000000000103 /* PorchLaunchScreen.swift in Sources */,
 				BB0000000000000000000104 /* AviaryTheme.swift in Sources */,
 				BB0000000000000000000105 /* BirdModels.swift in Sources */,
 				BB0000000000000000000106 /* SpeciesData.swift in Sources */,
@@ -339,14 +339,14 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Backyard Birds/Info.plist";
+				INFOPLIST_FILE = "Birds Next Door/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thicketlane.backyardbirds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wrenporch.birdsnextdoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -368,14 +368,14 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Backyard Birds/Info.plist";
+				INFOPLIST_FILE = "Birds Next Door/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thicketlane.backyardbirds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wrenporch.birdsnextdoor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -390,7 +390,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB0000000000000000000501 /* Build configuration list for PBXNativeTarget "Backyard Birds" */ = {
+		BB0000000000000000000501 /* Build configuration list for PBXNativeTarget "Birds Next Door" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB0000000000000000000803 /* Debug */,
@@ -399,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB0000000000000000000502 /* Build configuration list for PBXProject "Backyard Birds" */ = {
+		BB0000000000000000000502 /* Build configuration list for PBXProject "Birds Next Door" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB0000000000000000000801 /* Debug */,

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FeatherLaunchScreen: View {
+struct PorchLaunchScreen: View {
     @State private var pulse = false
 
     var body: some View {
@@ -19,7 +19,7 @@ struct FeatherLaunchScreen: View {
                         .scaleEffect(pulse ? 1.08 : 0.94)
                     BirdGlyph(size: 64, color: Aviary.forest)
                 }
-                Text("Backyard Birds")
+                Text("Birds Next Door")
                     .font(Aviary.title(28))
                     .foregroundColor(Aviary.ink)
                 Text("Loading your field guide...")

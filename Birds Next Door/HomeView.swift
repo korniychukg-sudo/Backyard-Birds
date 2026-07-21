@@ -62,7 +62,7 @@ struct HomeView: View {
                 Text(AviaryFormat.weekdayDay.string(from: Date()))
                     .font(Aviary.body(13, .semibold))
                     .foregroundColor(Aviary.inkSoft)
-                Text("Backyard Birds")
+                Text("Birds Next Door")
                     .font(Aviary.title(30))
                     .foregroundColor(Aviary.ink)
             }

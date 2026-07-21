@@ -139,7 +139,7 @@ struct MoreView: View {
                     .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 3)
             )
 
-            Text("Backyard Birds is an offline field guide and life list. All of your sightings stay on this device.")
+            Text("Birds Next Door is an offline field guide and life list. All of your sightings stay on this device.")
                 .font(Aviary.body(12))
                 .foregroundColor(Aviary.inkSoft)
                 .fixedSize(horizontal: false, vertical: true)

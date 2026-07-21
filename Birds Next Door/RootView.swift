@@ -36,7 +36,7 @@ struct RootView: View {
                     AnyView(BookGlyph(size: 23, color: active ? Aviary.forest : Aviary.inkSoft.opacity(0.55)))
                 }
                 tabButton(index: 2, label: "Life List") { active in
-                    AnyView(FeatherGlyph(size: 23, color: active ? Aviary.forest : Aviary.inkSoft.opacity(0.55)))
+                    AnyView(PorchGlyph(size: 23, color: active ? Aviary.forest : Aviary.inkSoft.opacity(0.55)))
                 }
                 tabButton(index: 3, label: "Learn") { active in
                     AnyView(BulbGlyph(size: 23, color: active ? Aviary.forest : Aviary.inkSoft.opacity(0.55)))

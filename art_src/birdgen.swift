@@ -1,4 +1,4 @@
-// Backyard Birds — deterministic art generator (macOS, swiftc)
+// Birds Next Door — deterministic art generator (macOS, swiftc)
 // Usage: birdgen <outDir> [sample|all|icon|banners]
 import Foundation
 import CoreGraphics
@@ -6,7 +6,7 @@ import ImageIO
 import AppKit
 
 // MARK: - Seeded RNG (deterministic)
-struct FeatherRNG: RandomNumberGenerator {
+struct PorchRNG: RandomNumberGenerator {
     var state: UInt64
     init(seed: UInt64) { state = seed == 0 ? 0x9E3779B97F4A7C15 : seed }
     mutating func next() -> UInt64 {
@@ -100,7 +100,7 @@ final class Canvas {
     }
     // Half-res deterministic grain scaled 2x — texture + PNG weight
     func grain(seed: UInt64, alpha: CGFloat, block: Int = 3) {
-        var rng = FeatherRNG(seed: seed)
+        var rng = PorchRNG(seed: seed)
         let gw = w / block, gh = h / block
         var buf = [UInt8](repeating: 0, count: gw * gh)
         for idx in 0..<buf.count { buf[idx] = UInt8(truncatingIfNeeded: rng.next()) }
@@ -178,7 +178,7 @@ let branchCol = Col(0x77573C)
 // MARK: - Bird portrait
 func drawBird(_ spec: BirdSpec, size: Int = 1400) -> Canvas {
     let cv = Canvas(size, size)
-    var rng = FeatherRNG(seed: seedFor(spec.id))
+    var rng = PorchRNG(seed: seedFor(spec.id))
     let S = CGFloat(size) / 1400.0
     let (bgTop, bgBot, circle) = groupBG[spec.group] ?? groupBG["songbirds"]!
 
@@ -550,7 +550,7 @@ func buildSpecs() -> [BirdSpec] {
 // MARK: - Group banner
 func drawBanner(groupId: String, title: String) -> Canvas {
     let cv = Canvas(1600, 900)
-    var rng = FeatherRNG(seed: seedFor("banner-" + groupId))
+    var rng = PorchRNG(seed: seedFor("banner-" + groupId))
     let (bgTop, bgBot, accent) = groupBG[groupId]!
     cv.vGradient(bgTop.darker(0.02), bgBot)
     // big soft arcs
